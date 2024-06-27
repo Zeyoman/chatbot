@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Gelica';
+    src: url('fonts/Fontspring-DEMO-gelica-regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'Gelica', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f3ee;
+    margin: 0;
+}
+
+#chat-container {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-window {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 10px 0;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: rgba(57, 186, 187, 0.5); /* #39BABB with 50% transparency */
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    max-width: 80%;
+}
+
+#input-container {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f3ee;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+#send-button {
+    background-color:rgba(57, 186, 187, 0.5);;
+    color: white;
+    border: none;
+    font-family: 'Gelica', Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: rgba(57, 186, 187, 0.5);;
+}
