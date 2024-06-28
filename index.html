@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Santé Mentale</title>
+    <title>Kintsugi | Chatbot Santé Mentale</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lnc4hrr.css">
 </head>
 <body>
-    <div id="chat-container">
-        <div id="chat-window">
-            <div id="output"></div>
+    <div id="container-bloc-chat">
+        <div id="choix-personne">
+            <button id="active" class="button-person">Patient</button>
+            <button class="button-person">Aidant</button>
         </div>
-        <div id="input-container">
-            <input id="user-input" type="text" placeholder="Tapez votre message ici...">
-            <button id="send-button">Envoyer</button>
+        <div id="chat-container">
+            <div id="chat-title">
+                <h1 id="title">Kintsugi</h1>
+            </div>
+            <div id="chat-window">
+                <div id="output"></div>
+            </div>
+            <div id="input-container">
+                <input id="user-input" type="text" placeholder="Écrivez votre message ici...">
+                <button id="send-button">Envoyer</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

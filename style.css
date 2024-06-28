@@ -1,10 +1,10 @@
-@font-face {
-    font-family: 'Gelica';
-    src: url('fonts/Fontspring-DEMO-gelica-regular.otf') format('opentype');
+:root{
+    --color-main: #24517c;
+    --color-main-hide: #24517ca6;
 }
 
 body {
-    font-family: 'Gelica', Arial, sans-serif;
+    font-family: 'Gelica', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,7 @@ body {
 
 #chat-container {
     width: 400px;
+    max-height: 500px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -34,13 +35,21 @@ body {
     flex-direction: column;
 }
 
+#title {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #80808026;
+}
+
 .message {
     margin: 10px 0;
 }
 
 .user-message {
     align-self: flex-end;
-    background-color: rgba(57, 186, 187, 0.5); /* #39BABB with 50% transparency */
+    background-color: var(--color-main);
+    color: white;
     padding: 10px;
     border-radius: 10px;
     max-width: 80%;
@@ -71,15 +80,57 @@ body {
 }
 
 #send-button {
-    background-color:rgba(57, 186, 187, 0.5);;
+    background-color:var(--color-main);
     color: white;
     border: none;
-    font-family: 'Gelica', Arial, sans-serif;
+    font-family: 'Gelica', sans-serif;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all ease-in-out 0.2;
 }
 
 #send-button:hover {
-    background-color: rgba(57, 186, 187, 0.5);;
+    background-color: var(--color-main-hide);
+}
+
+.button-person {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 7px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-family: 'Gelica', sans-serif;
+}
+
+#choix-personne {
+    margin: 0 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#active{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.container-bot-message {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-user-message {
+    display: flex;
+    justify-content: flex-end;
+}
+
+img{
+    position: relative;
+    margin-bottom: 20px;
+    left: -8px;
 }
